@@ -25,7 +25,7 @@ public class JobController {
 
     // The detail display for a given Job at URLs like /job?id=17
     @RequestMapping(value = "")
-    public String index(Model model,Integer id) {
+    public String index(Model model,int id) {
 
         // TODO #1 - get the Job with the given ID and pass it into the view - DONE!
 
@@ -76,7 +76,7 @@ public class JobController {
         model.addAttribute(someId);
 
 
-        return "redirect:";
+        return "redirect:/job/?id="+someId;
 
     }
 }
